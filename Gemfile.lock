@@ -1,0 +1,23 @@
+PATH
+  remote: .
+  specs:
+    overlay (0.1.0)
+      httpx
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    http-2 (1.1.1)
+    httpx (1.5.1)
+      http-2 (>= 1.0.0)
+
+PLATFORMS
+  arm64-darwin-23
+  ruby
+
+DEPENDENCIES
+  httpx
+  overlay!
+
+BUNDLED WITH
+   2.6.2
