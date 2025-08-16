@@ -83,10 +83,10 @@ puts response
 ```ruby
 # Create a new token
 response = Overlay::Token.create({
-	network: "solana", # or "eth" "base" "bsc" "blast" "polygon" "bera" "monad" etc
+  network: "solana", # or "eth" "base" "bsc" "blast" "polygon" "bera" "monad" etc
   name: "My Token",
   symbol: "MTK",
-  image: "image url"
+  image: "image url",
   supply: 1000000000,
   decimals: 9,
   # Add other token parameters
@@ -101,7 +101,7 @@ puts response
 # Mint tokens to an address
 mint_address = "your_token_mint_address"
 response = Overlay::Token.mint(mint_address, {
-	network: "solana",
+  network: "solana",
   amount: 1000
 })
 
@@ -113,7 +113,7 @@ puts response.success
 ```ruby
 # Transfer tokens between addresses
 response = Overlay::Token.transfer(mint_address, {
-	network: "solana",
+  network: "solana",
   amount: 1000,
   recipient: "recipient_address"
 })
@@ -124,7 +124,7 @@ response = Overlay::Token.transfer(mint_address, {
 ```ruby
 # Burn tokens
 response = Overlay::Token.burn(mint_address, {
-	network: "solana",
+  network: "solana",
   amount: 1000
 })
 ```
@@ -136,7 +136,7 @@ response = Overlay::Token.burn(mint_address, {
 ```ruby
 # Create a new NFT collection or individual NFT
 response = Overlay::NFT.create({
-	network: "solana",
+  network: "solana",
   name: "My NFT",
   symbol: "MNFT",
   description: "A unique NFT",
@@ -153,7 +153,7 @@ puts response.success
 # Mint an NFT
 mint_address = "your_nft_mint_address"
 response = Overlay::NFT.mint(mint_address, {
-	network: "solana"
+  network: "solana"
 })
 ```
 
